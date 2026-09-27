@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Private Chat</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<main id="lock" class="screen">
+  <div class="lock-card">
+    <div class="lock-icon">🔐</div>
+    <h1>Private Chat</h1>
+    <p>Enter password to continue</p>
+    <input id="pass" type="password" placeholder="Password" autocomplete="off">
+    <button id="open">Open Chat</button>
+    <div id="wrong" class="error"></div>
+  </div>
+</main>
+
+<main id="chat" class="chat hidden">
+  <header class="topbar">
+    <div class="avatar">💬</div>
+    <div class="title">
+      <b>Private Chat</b>
+      <span id="status">Connecting…</span>
+    </div>
+    <button id="lockBtn" class="icon-btn">🔒</button>
+  </header>
+
+  <section id="messages" class="messages"></section>
+
+  <div id="typing" class="typing hidden">typing…</div>
+
+  <form id="form" class="composer">
+    <input id="text" maxlength="2000" placeholder="Type a message…">
+    <button type="submit">➤</button>
+  </form>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
