@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: private-two-person-chat
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: CHAT_PASSWORD
+        value: "2604"
